@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.MbSyllabus"
+	BackgroundImage="background.jpg">
+
+
+<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                iOS="5, 25, 5, 5"
+                Android="25"
+                WinPhone="5" />
+    </ContentPage.Padding>
+
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+
+				<Label Text="COEN 268: MOBILE APPLICATION DEVELOPMENT"
+						HorizontalOptions="CenterAndExpand"
+						Style="{StaticResource labelStyle}"/>
+
+
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Course Objectives:"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="• Learning how to use C# language to write single code base applications which can be run on the major platform iOS, Android, and Windows."/>	
+					<Label Text="• Gain an understanding of the concepts and capabilities how to create cross-platform mobile applications using Xamarin.Forms."/>		
+					<Label Text="• Acquire Xamarin.Forms skills for developing cross-platform mobile applications."/>	
+					<Label Text="• Through practices to obtain the behind the sense ideas of cross-platform mobile development"/>	
+				</StackLayout>
+
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Book :"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="1. Creating Mobile Apps with Xamarin.Forms Book First Edition (by Charles Petzold) | Available @ https://developer.xamarin.com/guides/xamarin-forms/creating-mobile-apps-xamarin-forms/ "/>	
+
+				</StackLayout>
+
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Expected Learning Outcomes:"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="• "/>	
+					<Label Text="• "/>		
+				</StackLayout>
+
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Assignments and Due Dates:"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="• Assignments are intended to quickly build your familiarity with developing mobile applications, and give you the skills you need to complete your class project. Homework is intended to be completed independently – collaboration is not allowed."/>	
+					<Label Text="• Unless otherwise stated, all assignments will be due at 6:00AM before class on the due date. Late assignments will be deducted 1% per minute late, up to a maximum penalty of 50% (in the absence of evidence of extenuating circumstances). No assignments will be accepted after the due date for the final assignment."/>		
+				</StackLayout>
+				
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+	
+</ContentPage>

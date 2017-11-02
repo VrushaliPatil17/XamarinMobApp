@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.MbView"
+	BackgroundImage="background.jpg">
+
+<ContentPage.ToolbarItems>
+		<ToolbarItem Text="MenuItem" Icon="menu.png" Priority="0" Activated="OnMenuButtonClicked"/>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                iOS="5, 25, 5, 5"
+                Android="25"
+                WinPhone="5" />
+    </ContentPage.Padding>
+	<ContentPage.Content>
+	<ScrollView>
+
+			<Frame>
+			<StackLayout >
+				
+					
+				<Label Text="COEN 241: Cloud Computing"
+					   HorizontalOptions="CenterAndExpand"
+					   Style="{StaticResource labelStyle}" />
+
+				<Label Text="Seats : 30"
+						HorizontalOptions="End"/>
+				<Label Text="Units : 04"
+						HorizontalOptions="End" />
+
+				<Label Text="Professor :"
+					   FontSize="Large"
+						HorizontalOptions="Start"/>
+				<Label x:Name="Pname"
+						Text="Abhishek Gupta"
+						TextColor="Blue" FontAttributes="Italic" />
+				<Label Text="Description :"
+					   FontSize="Large"
+						HorizontalOptions="StartAndExpand"/>
+
+				<Label Text="Syllabus :"
+					   FontSize="Large"
+						HorizontalOptions="Start"/>
+			</StackLayout>
+			</Frame>
+
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

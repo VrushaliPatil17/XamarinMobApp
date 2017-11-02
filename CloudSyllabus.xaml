@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.CloudSyllabus"
+	BackgroundImage="background.jpg">
+<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                iOS="5, 25, 5, 5"
+                Android="25"
+                WinPhone="5" />
+    </ContentPage.Padding>
+
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+
+				<Label Text="COEN 241: CLOUD COMPUTING"
+						HorizontalOptions="CenterAndExpand"
+						Style="{StaticResource labelStyle}"/>
+
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Course Objectives:"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="• To clearly understand fundamental concepts and underlying technologies enabling cloud computing, including the reasons for IT transformation to clouds" />
+
+					<Label Text="• To understand the emerging technology trends in cloud computing architectures, models, tools, etc. such as containers"/>		
+					<Label Text="• To be able to independently study a problem in cloud computing space and propose and implement a solution through a group project, with a conference paper like report."/>	
+					<Label Text="• To be able to understand state-of-the-art in cloud computing research by reading research publications beyond textbook		"/>
+				</StackLayout>
+
+
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Books:"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="1. Distributed and Cloud Computing | Authors:	Hwang, Kai; Jack Dongarra; Fox, Geoffrey E."/>	
+					<Label Text="2. Cloud Computing: A Hands-On Approach | Authors:	Arshdeep Bahga;Vijay Madisetti	"/>		
+				</StackLayout>
+
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Homework/Programming assignment:"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="• Homework/assignment will focus on conceptual understanding and getting familiar with cloud tools"/>	
+					<Label Text="• Research area in cloud computing of your interest. Project will be due in 2 phases - a) project proposal which would include state-of-the-art, problem addressed and proposed solution and b) final paper/report which would include the state-of-the-art, problem addressed, solution and results. The project consists of writing a research paper. Bonus marks will be awarded for exceptional projects		"/>		
+				</StackLayout>
+				
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

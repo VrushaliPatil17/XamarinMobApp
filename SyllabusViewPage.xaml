@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.SyllabusViewPage">
+	<MasterDetailPage.Master >
+
+        <ContentPage Padding="10" BackgroundColor="#c5eff7" Title="Master">
+            <ContentPage.Content>
+                <StackLayout HorizontalOptions="CenterAndExpand">
+
+			<StackLayout Padding="30" HorizontalOptions="CenterAndExpand" >
+				<Label Text="Select Catgory" FontSize="20"
+					   Style="{StaticResource labelStyle}"/>
+			</StackLayout>
+
+			<StackLayout HorizontalOptions="CenterAndExpand" Spacing="30">
+				
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name = "CButton" Text="Courses" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="PButton" Text="Professors" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="SButton" Text="Syllabus" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+			</StackLayout>
+
+		</StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundImage="background.jpg">
+			<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+					Android="25"/>
+    </ContentPage.Padding>
+           
+	
+	<ContentPage.Content>
+				<ScrollView>
+			<ListView x:Name="link1" BackgroundColor="Transparent"  IsPullToRefreshEnabled="true" SeparatorVisibility="None">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+					   <ViewCell>
+				            <StackLayout Orientation="Vertical">
+								<Label Text="{Binding Cnlist}" Style="{StaticResource labelStyle}"/>
+								<Label Text="For Full syllabus Description Go To Following Link" FontSize="20"/>
+								<Label Text="{Binding Slink}" TextColor="Blue" HorizontalOptions="Start"> 
+									<Label.GestureRecognizers>
+										 <TapGestureRecognizer  Tapped="OnLink" NumberOfTapsRequired="1" />
+									</Label.GestureRecognizers>
+								</Label>
+							</StackLayout>
+					     </ViewCell> 
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView></ScrollView>
+	</ContentPage.Content>
+	
+</ContentPage>
+</MasterDetailPage.Detail>
+</MasterDetailPage>

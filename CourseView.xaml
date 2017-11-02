@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.CourseView">
+	<MasterDetailPage.Master >
+
+        <ContentPage Padding="10" BackgroundColor="#c5eff7" Title="Master">
+            <ContentPage.Content>
+                <StackLayout HorizontalOptions="CenterAndExpand">
+
+			<StackLayout Padding="30" HorizontalOptions="CenterAndExpand" >
+				<Label Text="Select Catgory" FontSize="20"
+					   Style="{StaticResource labelStyle}"/>
+			</StackLayout>
+
+			<StackLayout HorizontalOptions="CenterAndExpand" Spacing="30">
+				
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name = "CButton" Text="Courses" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="PButton" Text="Professors" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="SButton" Text="Syllabus" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+			</StackLayout>
+
+		</StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundImage="background.jpg">
+			<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+					Android="0,25,0,25"/>
+    </ContentPage.Padding>
+           <ContentPage.Content>
+				
+			
+			<ListView x:Name="Display" BackgroundColor="Transparent"  IsPullToRefreshEnabled="true" SeparatorVisibility="None">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+					   <ViewCell>
+							
+				            <StackLayout Orientation="Vertical" Padding="20" BackgroundColor="Transparent" HeightRequest="70" >
+								
+								<StackLayout Orientation="Vertical">
+									<Label Text="{Binding Code }" Style="{StaticResource labelStyle}" FontSize="20"/>
+									<Label Text="{Binding Cnlist}" Style="{StaticResource labelStyle}" FontSize="20"/>
+								</StackLayout>
+
+								<StackLayout Orientation="Horizontal">
+						
+									<Label Text="Seats :"/>
+									<Label Text="{Binding Seat}" TextColor="Black" HorizontalOptions="End"/>
+								</StackLayout>
+
+								<StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+									<Label Text="Description :"/>
+									<Label Text="{Binding Descp}" TextColor="Black" > </Label>
+								</StackLayout>
+									
+								<StackLayout Orientation="Horizontal">
+									<Label Text="Professor :" />
+									<Label Text="{Binding Proflist}" TextColor="Blue" > </Label>
+								</StackLayout>
+
+							</StackLayout>
+							
+							
+					     </ViewCell> 
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		
+		
+	</ContentPage.Content>
+	
+</ContentPage>
+</MasterDetailPage.Detail>
+</MasterDetailPage>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.AGView" BackgroundImage="background.jpg">
+
+
+	<ContentPage.Content>
+		<ScrollView>
+		<StackLayout>
+			<StackLayout Padding="0,50,0,50" HorizontalOptions="Center" >
+				<Label Text="Prof. Abhishek Gupta" 
+					Style="{StaticResource labelStyle}"/>
+			</StackLayout>
+
+			<StackLayout> 
+					<!--show stars-->
+					<Label x:Name="ratedisplay" Text="Rate : 0 / 5"
+					HorizontalOptions="EndAndExpand"
+					FontSize="20"/>
+			</StackLayout>
+
+			<StackLayout>
+					<Label Text="Subject : Cloud Computing" TextColor="Purple" FontSize="20"/>
+			</StackLayout>
+
+				<Frame >
+					<StackLayout>
+						<Label Text="Xamarin: " FontAttributes="Bold"/>
+			<Label Text="the professor is really good, he explained each and every concept and functionality in detail. Frequent Quizzes were much better than a mid term and a final exam.
+Course is really good. Assignments were tough but learned a lot from them."/></StackLayout></Frame>
+			<Button Text="Rate" Clicked="OnRateClicked"
+					HorizontalOptions="End"
+					VerticalOptions= "End"
+					Style="{StaticResource buttonStyle}"/>
+				
+			<Frame IsVisible="false" x:Name="rate" BackgroundColor="Silver">
+				<StackLayout Padding="0,50,0,50">
+					<Label Text="What you think?" 
+							 HorizontalOptions="Center" 
+							FontSize= "30"
+							TextColor="Red"/>
+				
+
+					<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+							<Button x:Name="star1" HeightRequest="20" WidthRequest="20"
+									Clicked="On1StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png"
+					                           WinPhone="Images/ic_action_bad.png" />
+					           </Button.Image>
+	       					</Button>
+							
+							<Button x:Name="star2" HeightRequest="20" WidthRequest="20"
+									Clicked="On2StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png"
+					                           WinPhone="Images/ic_action_bad.png" />
+					           </Button.Image>
+	       					</Button>
+							
+							<Button x:Name="star3" HeightRequest="20" WidthRequest="20"
+									Clicked="On3StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png"
+					                           WinPhone="Images/ic_action_bad.png" />
+					           </Button.Image>
+	       					</Button>
+							
+							<Button x:Name="star4" HeightRequest="20" WidthRequest="20"
+									Clicked="On4StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png"
+					                           WinPhone="Images/ic_action_bad.png" />
+					           </Button.Image>
+	       					</Button>
+							
+							<Button x:Name="star5" HeightRequest="20" WidthRequest="20"
+									Clicked="On5StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png"
+					                           WinPhone="Images/ic_action_bad.png" />
+					           </Button.Image>
+	       					</Button>
+						</StackLayout>	
+						<Button Text="Save"
+								Style="{StaticResource buttonStyle}"
+								Clicked="OnSaveClicked"
+								HorizontalOptions="End"/>
+							
+						
+				</StackLayout>
+			</Frame>
+
+		
+		</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

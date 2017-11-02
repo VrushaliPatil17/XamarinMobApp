@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Project_Milestone_3.OSSyllabus"
+	BackgroundImage="background.jpg">
+
+<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                iOS="5, 25, 5, 5"
+                Android="25"
+                WinPhone="5" />
+    </ContentPage.Padding>
+
+	<ContentPage.Content>
+		<ScrollView>
+			<StackLayout>
+
+				<Label Text="COEN 283: OPERATING SYSTEM"
+						HorizontalOptions="CenterAndExpand"
+						Style="{StaticResource labelStyle}"/>
+
+				
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Course Objectives:"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="• To understand and use the basic concepts of operating systems, common to most computer systems, which interfaces the machine with the programmer. In particular, this class is meant to introduce concepts such as the process management, synchronization, memory management and I/O Management The successful student will be able to understand the basic components of a computer operating system, and the interactions among the various components. The course will cover an introduction on the policies for scheduling, deadlocks, memory management, synchronization, and file systems. "/>	
+						
+				</StackLayout>
+
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Books:"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="1. Modern operating systems | AuthorS : Andrew S. Tanenbaum;Herbert Bos "/>	
+							
+				</StackLayout>
+
+				<StackLayout Padding="30" Orientation="Vertical">
+					<Label Text="Expected Learning Outcomes:"
+							FontAttributes="Bold"
+							TextColor="Purple"/>
+
+					<Label Text="• Understand the basic OS functionality: CPU scheduling, process management, main memory management, secondary storage management, I/O devices, file management, security. "/>	
+					<Label Text="• Apply the concepts in process management, such as allocating resources to processes, handling inter-process communication, multi-threading, deadlock detection and avoidance."/>
+					<Label Text="• Apply the concepts in memory management, such as paging, segmentation and virtual memory, including page replacement algorithms."/>
+					<Label Text="• Apply the concepts in I/O and disk management, file systems, and file management."/>
+					<Label Text="• Understand the basic security principles and threats, such as password protection, logic bombs, viruses, worms, cryptography, and steganography."/>	
+				</StackLayout>
+
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+	
+</ContentPage>

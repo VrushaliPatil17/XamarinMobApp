@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.MainPage" 
+	BackgroundImage="background.jpg">
+<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                iOS="5, 25, 5, 5"
+                Android="25"
+                WinPhone="5" />
+    </ContentPage.Padding>
+    <ScrollView>
+		<StackLayout HorizontalOptions="CenterAndExpand">
+
+			<StackLayout Padding="30" HorizontalOptions="CenterAndExpand">
+				<Label Text="Select Catgory" 
+					   Style="{StaticResource labelStyle}" />
+			</StackLayout>
+
+			<StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Spacing="30">
+				
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name = "CButton" ContentLayout="Top,0" Text="Courses" 
+							Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="PButton" ContentLayout="Top,0" Text="Professors" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="SButton" ContentLayout="Top,0" Text="Syllabus" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+			</StackLayout>
+
+		</StackLayout>
+	</ScrollView>
+	
+</ContentPage>

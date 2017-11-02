@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.ProfView">
+		<MasterDetailPage.Master >
+
+        <ContentPage Padding="10" BackgroundColor="#c5eff7" Title="Master">
+            <ContentPage.Content>
+                <StackLayout HorizontalOptions="CenterAndExpand">
+
+			<StackLayout Padding="30" HorizontalOptions="CenterAndExpand" >
+				<Label Text="Select Catgory" FontSize="20"
+					   Style="{StaticResource labelStyle}"/>
+			</StackLayout>
+
+			<StackLayout HorizontalOptions="CenterAndExpand" Spacing="30">
+				
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name = "CButton" Text="Courses" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="PButton" Text="Professors" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="SButton" Text="Syllabus" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+			</StackLayout>
+
+		</StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundImage="background.jpg">
+			<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+					Android="25"/>
+    </ContentPage.Padding>
+            <ContentPage.Content>
+				<ScrollView>
+
+		<StackLayout>
+
+
+				<StackLayout x:Name="hide" Padding="30" IsVisible="false">
+					<Label Text="What you think?" 
+							 HorizontalOptions="Center" 
+							FontSize= "30"
+							TextColor="Red"/>
+				
+
+					<StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+							<Button x:Name="star1" HeightRequest="20" WidthRequest="20"
+									Clicked="On1StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png" />
+					           </Button.Image>
+	       					</Button>
+							
+							<Button x:Name="star2" HeightRequest="20" WidthRequest="20"
+									Clicked="On2StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png" />
+					           </Button.Image>
+	       					</Button>
+							
+							<Button x:Name="star3" HeightRequest="20" WidthRequest="20"
+									Clicked="On3StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png" />
+					           </Button.Image>
+	       					</Button>
+							
+							<Button x:Name="star4" HeightRequest="20" WidthRequest="20"
+									Clicked="On4StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png" />
+					           </Button.Image>
+	       					</Button>
+							
+							<Button x:Name="star5" HeightRequest="20" WidthRequest="20"
+									Clicked="On5StarClicked">
+					           <Button.Image>
+					               <OnPlatform x:TypeArguments="FileImageSource"
+					                           iOS="star.png"
+					                           Android="star.png" />
+					           </Button.Image>
+	       					</Button>
+						</StackLayout>
+				
+						<Button Text="Save"
+								Style="{StaticResource buttonStyle}"
+								Clicked="OnSaveClicked"
+								HorizontalOptions="End"/>
+							
+						
+				</StackLayout>
+	
+
+			<StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+						<Image Source="prof.png" Style="{StaticResource logoImage}"/>
+		
+						
+				<StackLayout Padding="20" Orientation="Vertical"> 
+					<Button Text="RATE" Style="{StaticResource buttonStyle}" Clicked="OnClicked"/>
+						<Label x:Name="ratedisplay" Text="Rate : 0 / 5" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+					
+				</StackLayout>
+			</StackLayout>
+
+	 	
+			<ListView x:Name="Display" BackgroundColor="Transparent"  IsPullToRefreshEnabled="true" SeparatorVisibility="None">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+					   <ViewCell>
+							
+				            <StackLayout Orientation="Vertical" Padding="20" BackgroundColor="Transparent"  >
+				
+								<StackLayout Orientation="Vertical">
+									<Label Text="Prof. " Style="{StaticResource labelStyle}"/>
+									<Label Text="{Binding Proflist}" Style="{StaticResource labelStyle}"/>
+								</StackLayout>
+
+								<StackLayout Orientation="Horizontal">
+									<Label Text="Subject : "/>
+									<Label Text="{Binding Cnlist}" TextColor="Blue" HorizontalOptions="Start"> </Label>
+								</StackLayout>
+
+							</StackLayout>
+
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+
+		</StackLayout>
+		</ScrollView>
+</ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
+
+
+

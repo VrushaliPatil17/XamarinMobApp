@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.CloudView"
+	BackgroundImage="background.jpg">
+	
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="MenuItem" Icon="menu.png" Priority="0" />
+	</ContentPage.ToolbarItems>
+
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                iOS="5, 25, 5, 5"
+                Android="25"
+                WinPhone="5" />
+    </ContentPage.Padding>
+	<ContentPage.Content>
+	<ScrollView>
+
+			
+			<StackLayout >
+				<StackLayout Padding="0,50,0,50" HorizontalOptions="Center" >
+				<Label Text="COEN 241: Cloud Computing"
+					   Style="{StaticResource labelStyle}"/>
+			</StackLayout>
+
+				<Label Text="Seats : 30"
+						HorizontalOptions="Center"
+				FontSize="30"/>
+				<Label Text="Units : 04"
+						HorizontalOptions="Center" FontSize="30"/>
+			
+				<StackLayout Orientation="Horizontal">
+						<Label Text="Professor :"
+							   FontSize="Large"
+								HorizontalOptions="Start"/>
+						<Label x:Name="Pname"
+								Text="Abhishek Gupta"
+								TextColor="Blue" FontAttributes="Italic" >
+						<!--<Label.GestureRecognizers>
+		        			<TapGestureRecognizer NumberOfTapsRequired="1" Tapped="OnProfClicked"/>
+		      			</Label.GestureRecognizers>-->
+							</Label>
+					</StackLayout>
+				<Label Text="Description :"
+					   FontSize="Large"
+						HorizontalOptions="StartAndExpand"/>
+
+				<Label Text="Syllabus :"
+					   FontSize="Large"
+						HorizontalOptions="Start"/>
+			</StackLayout>
+		
+
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

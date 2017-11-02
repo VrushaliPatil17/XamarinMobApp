@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.SyllabusList">
+	<MasterDetailPage.Master >
+
+        <ContentPage Padding="10" BackgroundColor="#c5eff7" Title="Master">
+            <ContentPage.Content>
+                <StackLayout HorizontalOptions="CenterAndExpand">
+
+			<StackLayout Padding="30" HorizontalOptions="CenterAndExpand" >
+				<Label Text="Select Catgory" FontSize="20"
+					   Style="{StaticResource labelStyle}"/>
+			</StackLayout>
+
+			<StackLayout HorizontalOptions="CenterAndExpand" Spacing="30">
+				
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name = "CButton" Text="Courses" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="PButton" Text="Professors" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+				<StackLayout Orientation="Horizontal">
+						<Button x:Name="SButton" Text="Syllabus" 
+								Style="{StaticResource buttonStyle}"/>
+				</StackLayout>
+
+			</StackLayout>
+
+		</StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundImage="background.jpg">
+			<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+					Android="25"/>
+    </ContentPage.Padding>
+            <ContentPage.Content>
+				
+	
+	<ScrollView>
+		<StackLayout Padding="20" HorizontalOptions="Center" >
+						<StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+						<Image Source="syllabus.png" Style="{StaticResource logoImage}"/>
+			</StackLayout>
+				<Label Text="Syllabus" 
+					Style="{StaticResource labelStyle}"/>
+		
+
+				
+				<ScrollView>
+					<ListView x:Name="slist" BackgroundColor="Transparent" IsPullToRefreshEnabled="true">
+						<ListView.ItemTemplate>
+							<DataTemplate>
+							   <ViewCell>
+						               	<Label  Text="{Binding Cnlist}"  >
+											<Label.GestureRecognizers>
+											 	<TapGestureRecognizer  Tapped="OnCourse" 
+							                                    NumberOfTapsRequired="1" />
+											</Label.GestureRecognizers> 									
+										</Label>
+								</ViewCell>
+							</DataTemplate>
+						</ListView.ItemTemplate>
+					</ListView>
+				</ScrollView>
+ 		</StackLayout>
+	</ScrollView>
+	</ContentPage.Content>
+</ContentPage>
+		</MasterDetailPage.Detail></MasterDetailPage>

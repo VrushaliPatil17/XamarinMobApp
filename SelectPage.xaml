@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.SelectPage">
+
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                iOS="5, 25, 5, 5"
+                Android="25"
+                WinPhone="5" />
+    </ContentPage.Padding>
+	
+	<ScrollView>
+		<StackLayout>
+
+			<StackLayout Padding="0,50,0,50" HorizontalOptions="Center" >
+				<Label Text="Category" 
+					FontAttributes="Italic"
+					   Style="{StaticResource labelStyle}"/>
+			</StackLayout>
+
+			<StackLayout VerticalOptions="Center" Spacing="30">
+				
+				<Frame>
+				<StackLayout x:Name="course" Orientation="Horizontal">
+						<Button Text="Courses" 
+								TextColor="Maroon" 
+								FontAttributes="Bold"
+								HorizontalOptions="CenterAndExpand"
+								VerticalOptions="CenterAndExpand"
+								FontSize="20"
+								Clicked="OnCourseClicked"/>
+				</StackLayout>
+				</Frame>
+
+				<Frame>
+				<StackLayout x:Name="prof" Orientation="Horizontal">
+						<Button Text="Professor" 
+								TextColor="Maroon" 
+								FontAttributes="Bold"
+								HorizontalOptions="CenterAndExpand"
+								VerticalOptions="CenterAndExpand"
+								FontSize="20"
+								Clicked="OnProfClicked"/>
+				</StackLayout>
+				</Frame>
+
+				<Frame>
+				<StackLayout x:Name="syllabus" Orientation="Horizontal">
+						<Button Text="Syllabus" 
+								TextColor="Maroon" 
+								FontAttributes="Bold"
+								HorizontalOptions="CenterAndExpand"
+								VerticalOptions="CenterAndExpand"
+								FontSize="20"
+								Clicked="OnSyllabusClicked"/>
+				</StackLayout>
+				</Frame>
+
+			</StackLayout>
+
+		</StackLayout>
+	</ScrollView>
+</ContentPage>

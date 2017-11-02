@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Project_Milestone_3.Login" Title="Course.OneStop" 
+	BackgroundImage="background.jpg">
+
+	
+	<ContentPage.Content>
+	<ScrollView>
+        <StackLayout>
+        	<StackLayout Padding="20" >
+				<Image Source="newlogo.png"
+					HeightRequest="100"
+					WidthRequest="100"/>
+			
+			</StackLayout>
+			
+			<StackLayout Padding="0,0,0,10" HorizontalOptions="Center" >
+				<Label Text="Welcome" 
+					   Style="{StaticResource labelStyle}"/>
+			</StackLayout>
+
+            <Entry x:Name="id" 
+                     Placeholder="Student ID"
+                     Style="{StaticResource entryStyle}"/>
+         
+            <Entry x:Name="pass"
+                     Placeholder="Password"
+                     IsPassword="true"
+                     Style="{StaticResource entryStyle}"/>
+			<Label Text="Answer for Security Question ?" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>	
+			<Entry x:Name="ans"
+                     Placeholder="Answer"
+                     IsPassword="true"
+                     Style="{StaticResource entryStyle}"/>
+            
+            <Button Text="Login"
+                    Clicked="OnLoginClicked"
+                    Style="{StaticResource buttonStyle}"/>
+
+            <Button Text="Register"
+					WidthRequest="150"
+                    Clicked="OnRegisterClicked"
+                    Style="{StaticResource buttonStyle}"/>
+		</StackLayout>
+	</ScrollView>
+    </ContentPage.Content>
+</ContentPage>

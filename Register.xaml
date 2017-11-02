@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="Project_Milestone_3.Register" 
+			Title="Registration" 
+	BackgroundImage="background.jpg">
+<ScrollView>
+	<StackLayout>
+		<StackLayout Padding="0,50,0,50" HorizontalOptions="Center" >
+				<Label Text="Register" 
+					   FontAttributes="Italic"
+					   Style="{StaticResource labelStyle}"/>
+		</StackLayout>
+ 
+  		<StackLayout Padding="10" VerticalOptions="Center" HorizontalOptions="Center" >
+      		<Entry x:Name="Sid"
+               		Placeholder="Student ID"
+               		Style="{StaticResource entryStyle}"/>
+  
+      		<Entry x:Name="pw"
+               		Placeholder="Enter Password"
+               		IsPassword="True"
+               		Style="{StaticResource entryStyle}"/>
+  
+     	 	<Entry x:Name="cpw"
+      	         	Placeholder="Confirm Password"
+               		IsPassword="True"
+               		Style="{StaticResource entryStyle}"/>
+
+			<Entry x:Name="sq"
+      	         	Placeholder="Security Question ?"
+               		Style="{StaticResource entryStyle}"/>
+			
+			<Entry x:Name="an"
+      	         	Placeholder="Answer"
+               		Style="{StaticResource entryStyle}"/>
+
+      		<Button x:Name="reg"
+                	Text="Register"
+                	Clicked="OnRegisterClicked" 
+					WidthRequest="150"
+                	Style="{StaticResource buttonStyle}"/>
+  
+  		</StackLayout>
+  	</StackLayout>
+</ScrollView>
+</ContentPage>
