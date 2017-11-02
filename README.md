@@ -1,0 +1,2 @@
+# XamarinMobApp
+A mobile application which helped users (students) to know about the subjects and the professors in the quarter. Through this app students could get all information related to course such as courses available in the quarter, coursework and syllabus of the subject, information about the professor and their rating using Microsoft Azure for backend database. Its is designed and developed using XAML as front-end and added functionality to application using C# in Xamarin Studio 
